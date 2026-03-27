@@ -1,0 +1,10 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="160" fill="#111111" rx="20"/>
+  <circle cx="80" cy="80" r="70" fill="none" stroke="#4a9e4a" stroke-width="10" stroke-dasharray="280 160" stroke-dashoffset="0" stroke-linecap="round"/>
+  <circle cx="80" cy="80" r="70" fill="none" stroke="#c8a84b" stroke-width="10" stroke-dasharray="160 280" stroke-dashoffset="-280" stroke-linecap="round"/>
+  <text x="80" y="38" font-family="serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.85)" text-anchor="middle" dominant-baseline="central">V</text>
+  <text x="38" y="82" font-family="serif" font-size="22" font-weight="700" fill="#4a9e4a" text-anchor="middle" dominant-baseline="central">V</text>
+  <text x="80" y="82" font-family="serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">S</text>
+  <text x="122" y="82" font-family="serif" font-size="22" font-weight="700" fill="#c8a84b" text-anchor="middle" dominant-baseline="central">T</text>
+  <text x="80" y="124" font-family="serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.85)" text-anchor="middle" dominant-baseline="central">T</text>
+</svg>
