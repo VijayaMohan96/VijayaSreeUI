@@ -150,7 +150,7 @@ export default function Products() {
     try {
       const token = localStorage.getItem('token')
       const res = await axios.post(
-        'http://localhost:8081/api/images/upload', formData,
+        `${import.meta.env.VITE_API_URL || 'http://localhost:8081/api'}/images/upload`, formData,
         { headers: { 'Content-Type': 'multipart/form-data', Authorization: `Bearer ${token}` } }
       )
       const url = res.data?.data?.url || res.data?.url
@@ -172,7 +172,7 @@ export default function Products() {
     try {
       const token = localStorage.getItem('token')
       const res = await axios.post(
-        'http://localhost:8081/api/import/products', formData,
+        `${import.meta.env.VITE_API_URL || 'http://localhost:8081/api'}/import/products`, formData,
         { headers: { 'Content-Type': 'multipart/form-data', Authorization: `Bearer ${token}` } }
       )
       const result = res.data?.data || res.data
