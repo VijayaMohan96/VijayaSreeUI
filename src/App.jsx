@@ -3,7 +3,8 @@ import { lazy, Suspense } from 'react'
 import Navbar from './components/navbar'
 
 // Lazy load all pages — only loads when user navigates to that page
-const Login = lazy(() => import('./pages/Login'))
+const LandingPage = lazy(() => import('./pages/LandingPage'))
+const Login       = lazy(() => import('./pages/Login'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 const Categories = lazy(() => import('./pages/Categories'))
 const Products = lazy(() => import('./pages/Products'))
@@ -16,7 +17,7 @@ const Customers = lazy(() => import('./pages/Customers'))
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
-  if (!token) return <Navigate to="/login" replace />
+  if (!token) return <Navigate to="/" replace />
   return children
 }
 
@@ -75,12 +76,16 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
+          <Route path="/" element={
+            localStorage.getItem('token')
+              ? <Navigate to="/dashboard" replace />
+              : <LandingPage />
+          } />
           <Route path="/login" element={
             localStorage.getItem('token')
               ? <Navigate to="/dashboard" replace />
               : <Login />
           } />
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
           {routes.map(({ path, el }) => (
             <Route key={path} path={path} element={
