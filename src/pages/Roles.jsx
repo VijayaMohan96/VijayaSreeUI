@@ -7,6 +7,7 @@ const ALL_PERMISSIONS = {
   'Sales': ['SALES_CHECKOUT', 'SALES_APPLY_DISCOUNT'],
   'Reports': ['REPORTS_DAILY', 'REPORTS_TRANSACTIONS'],
   'Users': ['USER_VIEW', 'USER_CREATE', 'USER_EDIT', 'USER_DEACTIVATE', 'USER_GRANT_PERMISSION'],
+  'Print Station': ['PRINT_STATION'],
 }
 
 const PERM_LABELS = {
@@ -29,6 +30,7 @@ const PERM_LABELS = {
   USER_EDIT: 'Edit users',
   USER_DEACTIVATE: 'Deactivate users',
   USER_GRANT_PERMISSION: 'Manage permissions',
+  PRINT_STATION: 'Use Print Station',
 }
 
 const empty = { name: '', description: '', permissions: [] }

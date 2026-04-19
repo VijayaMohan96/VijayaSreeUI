@@ -14,6 +14,7 @@ const Stock = lazy(() => import('./pages/Stock'))
 const Roles = lazy(() => import('./pages/Roles'))
 const Users = lazy(() => import('./pages/Users'))
 const Customers = lazy(() => import('./pages/Customers'))
+const PrintStation = lazy(() => import('./pages/PrintStation'))
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
@@ -69,6 +70,7 @@ const routes = [
   { path: '/roles', el: <Roles /> },
   { path: '/users', el: <Users /> },
   { path: '/customers', el: <Customers /> },
+  { path: '/print-station', el: <PrintStation /> },
 ]
 
 function App() {

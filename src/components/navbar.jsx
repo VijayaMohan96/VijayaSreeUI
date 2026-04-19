@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 const links = [
   { to: '/dashboard', label: 'Dashboard', icon: '⬛' },
   { to: '/checkout', label: 'POS', icon: '🧾' },
+  { to: '/print-station', label: 'Print Station', icon: '🖨️' },
   { to: '/products', label: 'Products', icon: '📦' },
   { to: '/customers', label: 'Customers', icon: '👤' },
   { to: '/reports', label: 'Reports', icon: '📈' },
@@ -31,6 +32,7 @@ export default function Navbar() {
   const canSee = (to) => {
     const map = {
       '/checkout': 'SALES_CHECKOUT',
+      '/print-station': 'PRINT_STATION',
       '/products': 'PRODUCT_VIEW',
       '/customers': 'SALES_CHECKOUT',
       '/reports': 'REPORTS_DAILY',
