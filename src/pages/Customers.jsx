@@ -153,8 +153,9 @@ export default function Customers() {
   const handleSearch = async (q) => {
     setSearch(q)
     if (!q.trim()) { fetchAll(); return }
+    if (!/^[a-zA-Z0-9\s\-+().]+$/.test(q)) return
     try {
-      const res = await api.get(`/customers/search?query=${q}`)
+      const res = await api.get(`/customers/search?query=${encodeURIComponent(q)}`)
       setCustomers(Array.isArray(res.data) ? res.data : [])
     } catch {}
   }
