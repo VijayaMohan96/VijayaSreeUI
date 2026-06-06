@@ -56,10 +56,10 @@ const PRODUCTS = [
 ]
 
 const STATS = [
-  { value: 25,  suffix: '+',  label: 'Years in Service'  },
-  { value: 500, suffix: '+',  label: 'Products Stocked'  },
-  { value: 10,  suffix: 'K+', label: 'Farmers Served'    },
-  { value: 50,  suffix: '+',  label: 'Villages Covered'  },
+  { value: 25,   suffix: '+',  label: 'Years in Service'  },
+  { value: 1000, suffix: '+',  label: 'Products Stocked'  },
+  { value: 50,   suffix: 'K+', label: 'Farmers Served'    },
+  { value: 100,  suffix: '+',  label: 'Villages Covered'  },
 ]
 
 const GALLERY = [
@@ -224,9 +224,9 @@ const CSS = `
 
   /* ── Hero ── */
   .lp-hero {
-    min-height: 100vh; position: relative;
+    min-height: 70vh; position: relative;
     display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 100px 40px 80px;
+    text-align: center; padding: 80px 40px 60px;
     background-size: cover; background-position: center 40%; overflow: hidden;
   }
   .hero-overlay {
@@ -587,7 +587,7 @@ const CSS = `
   @media (max-width: 768px) {
     .lp-sec, .lp-video, .lp-brands, .lp-testi { padding: 80px 24px; }
     .lp-testi { padding: 80px 0; }
-    .lp-hero { padding: 90px 24px 70px; }
+    .lp-hero { padding: 70px 24px 50px; }
     .stats-row { grid-template-columns: 1fr 1fr; }
     .stat-cell:nth-child(2) { border-right: none; }
     .products-wrap { grid-template-columns: 1fr; }
@@ -680,7 +680,7 @@ export default function LandingPage() {
             <span className="hero-sub-telugu">మన విజయ శ్రీ</span>
             <p className="hero-sub">
               Your trusted partner for quality pesticides, fertilizers and crop care solutions
-              across 50+ villages in Chittoor district.
+              across 100+ villages in Chittoor district.
             </p>
             <div className="hero-ctas">
               <button className="cta-primary" onClick={() => go('products')}>Explore Products</button>
